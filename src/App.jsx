@@ -13,7 +13,8 @@ function App() {
 
   const getCityInfo = async () => {
     try {
-      let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=b48bce0536c819ea2dfaf8a953a4c492`;
+      const apikey = import.meta.env.VITE_API_KEY;
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apikey}`;
       const res = await fetch(url);
       const data = await res.json();
       const { temp, temp_min, temp_max, feels_like, humidity, pressure } =
