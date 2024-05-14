@@ -114,7 +114,7 @@ function App() {
           <h1 className="weather_city">
             {name}, {countryFullName}
           </h1>
-          <p className="weather_date_time">{formattedDateTime}</p>
+          <p className="weather_date_time">{formattedDateTime} IST</p>
           <div className="weather_data">
             <p className="weather_forecast">{weathermood}</p>
             <div className="weather_icon">
